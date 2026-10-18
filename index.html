@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SILAH – Smart Family Care &amp; Medication Reminder</title>
+  <meta name="description" content="SILAH (صلة) is a family-care web application that helps elderly users manage medication, appointment and daily-task reminders. Group 208, Kuwait Technical College.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-task" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></symbol>
+  <symbol id="i-reply" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="m8 10 2.5 2.5L16 7"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><circle cx="19" cy="18" r="3"/><path d="M5 9v3a3 3 0 0 0 3 3h8"/><path d="m13 12 3 3-3 3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="24" r="12" fill="none" stroke="#0e7a66" stroke-width="4.5"/><circle cx="30" cy="24" r="12" fill="none" stroke="#e07a2e" stroke-width="4.5"/></svg>
+      <b>SILAH</b><span lang="ar">صلة</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#deliverables">Deliverables</a>
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#security">Security</a>
+      <a href="#stack">Tech stack</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ hero ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><svg class="icon"><use href="#i-heart"/></svg> Family care, made simple</span>
+        <h1>SILAH <span lang="ar">صلة</span><br><small>Smart Family Care &amp; Medication Reminder</small></h1>
+        <p class="lead">A family-care web application that helps elderly users manage medication, appointment and daily-task reminders — in the voice of the people they love.</p>
+        <ul class="facts">
+          <li><b>Group</b> 208</li>
+          <li><b>College</b> Kuwait Technical College</li>
+          <li><b>Supervisor</b> Ms. Annet Noel</li>
+        </ul>
+      </div>
+      <aside class="status-card" aria-label="Project progress">
+        <span class="status-pill"><svg class="icon"><use href="#i-check"/></svg> Week 1 complete</span>
+        <h2>Planning &amp; design</h2>
+        <p>The idea, main features, user workflow, security requirements and technology stack are finalized.</p>
+        <div class="weeks" role="img" aria-label="Week 1 of 6 complete">
+          <span class="done">1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <p class="next"><svg class="icon"><use href="#i-clock"/></svg> Next: first working prototype</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ deliverables ============ -->
+  <section id="deliverables" class="section">
+    <div class="wrap">
+      <p class="kicker">Week 1</p>
+      <h2 class="title">Completed deliverables</h2>
+      <ol class="deliverables">
+        <li>
+          <span class="num">1</span>
+          <div><h3>Project idea finalized</h3>
+          <p>Finalized the SILAH project idea: a family-care application that helps elderly users manage medication, appointment, and daily-task reminders.</p></div>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <div><h3>Main features identified</h3>
+          <p>Identified the main features, including personalized voice reminders, Arabic and English support, reminder responses, missed-reminder follow-up, and secure family linking.</p></div>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <div><h3>Workflow &amp; requirements documented</h3>
+          <p>Documented the user workflow, family dashboard, reminder-response process, and key security requirements.</p></div>
+        </li>
+        <li>
+          <span class="num">4</span>
+          <div><h3>Technology stack proposed</h3>
+          <p>Proposed the prototype technology stack: HTML, CSS, JavaScript, Python Flask, and SQLite.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ idea ============ -->
+  <section class="section alt">
+    <div class="wrap idea">
+      <div>
+        <p class="kicker">1 · The idea</p>
+        <h2 class="title">Why SILAH?</h2>
+        <p>Many elderly people take several medicines a day, have regular appointments and small daily tasks — and often live apart from the children who worry about them. Paper notes and phone alarms are easy to miss and do not tell the family anything.</p>
+        <p><b>SILAH</b> (Arabic for “connection”) links the two sides. Family members set the reminders, record a short message in their own voice, and see whether each reminder was answered. The elderly user gets one clear, large-text screen with big buttons.</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-card">
+          <span class="ic teal"><svg class="icon"><use href="#i-users"/></svg></span>
+          <h3>Family member</h3>
+          <p>Creates reminders, records voice messages, and follows today’s reminders from a dashboard.</p>
+        </div>
+        <div class="who-card">
+          <span class="ic orange"><svg class="icon"><use href="#i-heart"/></svg></span>
+          <h3>Elderly user</h3>
+          <p>Hears the reminder, sees it in large text, and answers with one tap.</p>
+        </div>
+        <div class="kinds">
+          <span><svg class="icon"><use href="#i-pill"/></svg> Medication</span>
+          <span><svg class="icon"><use href="#i-cal"/></svg> Appointments</span>
+          <span><svg class="icon"><use href="#i-task"/></svg> Daily tasks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ features ============ -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <p class="kicker">2 · Main features</p>
+      <h2 class="title">What SILAH will do</h2>
+      <div class="features">
+        <article class="feature">
+          <span class="ic teal"><svg class="icon"><use href="#i-mic"/></svg></span>
+          <h3>Personalized voice reminders</h3>
+          <p>A family member records a short message — “Mama, it’s time for your medicine” — that plays when the reminder is due.</p>
+        </article>
+        <article class="feature">
+          <span class="ic blue"><svg class="icon"><use href="#i-lang"/></svg></span>
+          <h3>Arabic &amp; English</h3>
+          <p>Every screen in both languages, with a right-to-left layout for Arabic. Each user chooses their own language.</p>
+        </article>
+        <article class="feature">
+          <span class="ic green"><svg class="icon"><use href="#i-reply"/></svg></span>
+          <h3>Reminder responses</h3>
+          <p>The elderly user answers with large buttons: <i>I took it</i>, <i>Later</i>, or a short voice or text reply.</p>
+        </article>
+        <article class="feature">
+          <span class="ic orange"><svg class="icon"><use href="#i-bell"/></svg></span>
+          <h3>Missed-reminder follow-up</h3>
+          <p>If there is no answer, the reminder repeats after a short time. If it is still unanswered, the family is alerted.</p>
+        </article>
+        <article class="feature">
+          <span class="ic purple"><svg class="icon"><use href="#i-link"/></svg></span>
+          <h3>Secure family linking</h3>
+          <p>Relatives join with a one-time invitation code, so only trusted family members can see or manage reminders.</p>
+        </article>
+        <article class="feature">
+          <span class="ic teal"><svg class="icon"><use href="#i-dash"/></svg></span>
+          <h3>Family dashboard</h3>
+          <p>One page that shows today’s reminders, their status, and anything that needs attention.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ workflow ============ -->
+  <section id="workflow" class="section alt">
+    <div class="wrap">
+      <p class="kicker">3 · Documentation</p>
+      <h2 class="title">User workflow</h2>
+      <ol class="flow">
+        <li><span class="step">1</span><h3>Set up</h3><p>A family member signs up and creates the account for the elderly relative.</p></li>
+        <li><span class="step">2</span><h3>Create a reminder</h3><p>Choose medication, appointment or task; set the date, time and repeat; record a voice message.</p></li>
+        <li><span class="step">3</span><h3>Reminder fires</h3><p>At the set time the elderly screen plays a chime and the voice message, and shows the reminder in large text.</p></li>
+        <li><span class="step">4</span><h3>Elderly responds</h3><p>One tap: <i>I took it</i>, <i>Later</i>, or a voice/text reply.</p></li>
+        <li><span class="step">5</span><h3>Family sees it</h3><p>The answer appears on the family dashboard straight away.</p></li>
+      </ol>
+
+      <div class="docs-grid">
+        <article class="doc">
+          <h3><svg class="icon"><use href="#i-reply"/></svg> Reminder-response process</h3>
+          <ul class="timeline">
+            <li><b>On time</b> Chime + voice message, reminder shown on screen.</li>
+            <li><b>Answer</b> <i>I took it / Done</i> closes the reminder. <i>Later</i> brings it back after 10 minutes.</li>
+            <li><b>No answer, +15 min</b> The reminder is repeated as a follow-up.</li>
+            <li><b>Still no answer, +30 min</b> Marked <i>No response</i> and shown to the family.</li>
+          </ul>
+          <p class="note">“I took it” is the user’s own confirmation. “No response” means nothing was recorded — not that medicine was missed.</p>
+        </article>
+        <article class="doc">
+          <h3><svg class="icon"><use href="#i-dash"/></svg> Family dashboard</h3>
+          <ul class="ticks">
+            <li>Today’s reminders in time order with a status: scheduled, delivered, answered, or no response.</li>
+            <li>A “Needs your attention” box for missed reminders.</li>
+            <li>Create, edit and stop reminders; record or upload a voice message.</li>
+            <li>History of past responses, including voice replies.</li>
+            <li>Switch between several elderly relatives.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ security ============ -->
+  <section id="security" class="section">
+    <div class="wrap">
+      <p class="kicker">3 · Documentation</p>
+      <h2 class="title">Key security requirements</h2>
+      <div class="sec-grid">
+        <div class="sec"><svg class="icon"><use href="#i-shield"/></svg><div><h3>Protected passwords</h3><p>Passwords are stored only as secure hashes, never as plain text.</p></div></div>
+        <div class="sec"><svg class="icon"><use href="#i-users"/></svg><div><h3>Role-based access</h3><p>Family members and elderly users each see only their own screens.</p></div></div>
+        <div class="sec"><svg class="icon"><use href="#i-link"/></svg><div><h3>Linked family only</h3><p>Reminders are visible only to relatives linked to that elderly user. Invitation codes work once and expire after 24 hours.</p></div></div>
+        <div class="sec"><svg class="icon"><use href="#i-clock"/></svg><div><h3>Sign-in protection</h3><p>Sign-in is paused for 10 minutes after 5 wrong passwords.</p></div></div>
+        <div class="sec"><svg class="icon"><use href="#i-check"/></svg><div><h3>Safe forms &amp; uploads</h3><p>Forms are protected against cross-site requests; voice uploads are checked for type and size.</p></div></div>
+        <div class="sec"><svg class="icon"><use href="#i-heart"/></svg><div><h3>Privacy &amp; honesty</h3><p>HTTPS when hosted. SILAH is a reminder tool, not a medical device.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ stack ============ -->
+  <section id="stack" class="section alt">
+    <div class="wrap">
+      <p class="kicker">4 · Technology</p>
+      <h2 class="title">Proposed prototype stack</h2>
+      <div class="stack">
+        <div class="tech"><span class="badge html">HTML</span><p>Page structure and accessible, large-text screens.</p></div>
+        <div class="tech"><span class="badge css">CSS</span><p>Responsive layout for phones and computers, right-to-left for Arabic.</p></div>
+        <div class="tech"><span class="badge js">JavaScript</span><p>Checking for due reminders, playing sounds, recording voice in the browser.</p></div>
+        <div class="tech"><span class="badge py">Python Flask</span><p>The server: accounts, reminders, scheduling and responses.</p></div>
+        <div class="tech"><span class="badge db">SQLite</span><p>Stores users, family links, reminders and responses.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span class="brand small">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="24" r="12" fill="none" stroke="#0e7a66" stroke-width="4.5"/><circle cx="30" cy="24" r="12" fill="none" stroke="#e07a2e" stroke-width="4.5"/></svg>
+      <b>SILAH</b>
+    </span>
+    <span>Group 208 · Kuwait Technical College · Supervisor: Ms. Annet Noel</span>
+  </div>
+</footer>
+
+</body>
+</html>
