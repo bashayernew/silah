@@ -33,6 +33,9 @@ Website progress: **45%** (week 2 of 4)
 
 ## This repository
 
-The project page (`index.html`) is a static site hosted on Vercel. It is updated every week as the project grows.
+- The Vercel link opens the **live SILAH website** (only the features finished so far are switched on). It runs on PythonAnywhere; `vercel.json` forwards the Vercel address to it.
+- The project progress page is at **`/progress`** (`progress.html`). It is updated every week as the project grows.
+
+Demo accounts (password `silah1234`): **sara** (family member) and **mama** (elderly user).
 
 Fonts: Plus Jakarta Sans and IBM Plex Sans Arabic (SIL Open Font License, see `assets/fonts/`).

@@ -252,10 +252,16 @@ figcaption { text-align: center; font-weight: 700; font-size: .9rem; color: var(
 .tests tr:last-child td { border-bottom: 0; }
 .tests td:first-child { font-weight: 800; color: var(--primary); white-space: nowrap; }
 
+.cta { display: flex; align-items: center; justify-content: center; gap: .5rem; margin-top: .2rem; padding: .85rem 1.2rem; border-radius: 16px; background: var(--grad); color: #fff; font-weight: 800; font-size: 1.05rem; text-decoration: none; box-shadow: 0 10px 24px -12px rgb(11 102 86 / 80%); transition: transform .15s, box-shadow .15s; }
+.cta:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -12px rgb(11 102 86 / 80%); }
+.cta-note { margin: .7rem 0 0; font-size: .88rem; text-align: center; }
+.nav a.nav-cta { background: var(--primary); color: #fff; }
+.nav a.nav-cta:hover { background: var(--primary-700); color: #fff; }
+
 /* phones */
 @media (max-width: 720px) {
   body { font-size: 16px; }
-  .nav { display: none; }
+  .nav a:not(.nav-cta) { display: none; }
   .hero { padding: 2.8rem 0 3.2rem; }
   .section { padding: 3.2rem 0; }
   .who-grid { grid-template-columns: 1fr; }
