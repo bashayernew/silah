@@ -1,6 +1,5 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/:path*", "destination": "https://beshoo33.pythonanywhere.com/:path*" }
+  "redirects": [
+    { "source": "/:path*", "destination": "https://beshoo33.pythonanywhere.com/:path*", "permanent": false }
   ]
 }
