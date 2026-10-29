@@ -27,6 +27,11 @@
   <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
   <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"/><circle cx="19" cy="18" r="3"/><path d="M5 9v3a3 3 0 0 0 3 3h8"/><path d="m13 12 3 3-3 3"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+  <symbol id="i-test" viewBox="0 0 24 24"><path d="M9 2v6l-5 9a3 3 0 0 0 2.6 4.5h10.8A3 3 0 0 0 20 17l-5-9V2"/><path d="M8 2h8M7 15h10"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></symbol>
 </svg>
 
 <header class="top">
@@ -36,11 +41,12 @@
       <b>SILAH</b><span lang="ar">صلة</span>
     </a>
     <nav class="nav" aria-label="Sections">
-      <a href="#deliverables">Deliverables</a>
-      <a href="#features">Features</a>
-      <a href="#workflow">Workflow</a>
-      <a href="#security">Security</a>
-      <a href="#stack">Tech stack</a>
+      <a href="#progress">Progress</a>
+      <a href="#week2">Week 2</a>
+      <a href="#design">Design</a>
+      <a href="#database">Database</a>
+      <a href="#team">Team</a>
+      <a href="#week1">Week 1</a>
     </nav>
   </div>
 </header>
@@ -60,22 +66,196 @@
         </ul>
       </div>
       <aside class="status-card" aria-label="Project progress">
-        <span class="status-pill"><svg class="icon"><use href="#i-check"/></svg> Week 1 complete</span>
-        <h2>Planning &amp; design</h2>
-        <p>The idea, main features, user workflow, security requirements and technology stack are finalized.</p>
-        <div class="weeks" role="img" aria-label="Week 1 of 6 complete">
-          <span class="done">1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        <span class="status-pill"><svg class="icon"><use href="#i-check"/></svg> Week 2 of 4 complete</span>
+        <div class="pct-row">
+          <h2>Website progress</h2>
+          <b class="pct">45%</b>
         </div>
-        <p class="next"><svg class="icon"><use href="#i-clock"/></svg> Next: first working prototype</p>
+        <div class="bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Website 45% complete"><span class="fill w45"></span></div>
+        <div class="weeks four" aria-hidden="true">
+          <span class="done">1</span><span class="done">2</span><span>3</span><span>4</span>
+        </div>
+        <p class="next"><svg class="icon"><use href="#i-clock"/></svg> Next: build the main pages and connect the database</p>
       </aside>
     </div>
   </section>
 
-  <!-- ============ deliverables ============ -->
-  <section id="deliverables" class="section">
+  <!-- ============ progress ============ -->
+  <section id="progress" class="section">
     <div class="wrap">
-      <p class="kicker">Week 1</p>
+      <p class="kicker">Project timeline</p>
+      <h2 class="title">Four weeks, step by step</h2>
+      <ol class="roadmap">
+        <li class="done">
+          <span class="rm-week">Week 1 · 20%</span>
+          <h3>Planning</h3>
+          <p>Idea, main features, user workflow, security requirements and technology stack.</p>
+          <span class="rm-state"><svg class="icon"><use href="#i-check"/></svg> Complete</span>
+        </li>
+        <li class="done current">
+          <span class="rm-week">Week 2 · 45%</span>
+          <h3>Design</h3>
+          <p>Elderly-friendly interface, database structure, reminder workflow, tasks and test cases.</p>
+          <span class="rm-state"><svg class="icon"><use href="#i-check"/></svg> Complete</span>
+        </li>
+        <li>
+          <span class="rm-week">Week 3</span>
+          <h3>Build</h3>
+          <p>Main pages in Arabic and English, database connected, reminders with text and voice notifications.</p>
+          <span class="rm-state soon">Next</span>
+        </li>
+        <li>
+          <span class="rm-week">Week 4</span>
+          <h3>Test &amp; launch</h3>
+          <p>Final features, full testing, and the finished website online.</p>
+          <span class="rm-state soon">Planned</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ week 2 deliverables ============ -->
+  <section id="week2" class="section alt">
+    <div class="wrap">
+      <p class="kicker">Week 2</p>
       <h2 class="title">Completed deliverables</h2>
+      <ol class="deliverables">
+        <li>
+          <span class="num">1</span>
+          <div><h3>Elderly-friendly interface</h3>
+          <p>Designed the initial elderly-friendly interface layout, focusing on large text, clear buttons, and simple navigation.</p></div>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <div><h3>Database structure</h3>
+          <p>Planned the database structure for Users, Family Links, Invitations, Reminders, and Reminder Responses.</p></div>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <div><h3>Reminder workflow</h3>
+          <p>Outlined the reminder creation and scheduling workflow for text and personalized voice notifications.</p></div>
+        </li>
+        <li>
+          <span class="num">4</span>
+          <div><h3>Tasks &amp; test cases</h3>
+          <p>Organized development tasks among group members and prepared initial test cases for reminder responses, missed reminders, and secure family access.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ interface design ============ -->
+  <section id="design" class="section">
+    <div class="wrap">
+      <p class="kicker">Week 2 · Interface design</p>
+      <h2 class="title">Designed for elderly users first</h2>
+      <div class="principles">
+        <span><svg class="icon"><use href="#i-text"/></svg> Large, clear text</span>
+        <span><svg class="icon"><use href="#i-check"/></svg> One big button per action</span>
+        <span><svg class="icon"><use href="#i-volume"/></svg> Chime + voice message</span>
+        <span><svg class="icon"><use href="#i-lang"/></svg> Arabic (right-to-left) &amp; English</span>
+        <span><svg class="icon"><use href="#i-layout"/></svg> Simple navigation, high contrast</span>
+      </div>
+      <div class="shots">
+        <figure class="phone">
+          <img src="assets/img/elderly-reminder-ar.webp" width="520" height="1067" loading="lazy" alt="Elderly reminder screen in Arabic: medicine name in large text, replay voice button and a big OK button">
+          <figcaption>Elderly screen · Arabic</figcaption>
+        </figure>
+        <figure class="phone">
+          <img src="assets/img/elderly-reminder-en.webp" width="520" height="1067" loading="lazy" alt="Elderly reminder screen in English with large text and one big OK button">
+          <figcaption>Elderly screen · English</figcaption>
+        </figure>
+        <figure class="browser">
+          <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="assets/img/new-reminder.webp" width="720" height="1101" loading="lazy" alt="New reminder form: type, name, instructions, date, time, repeat and a personal voice message">
+          <figcaption>New reminder form</figcaption>
+        </figure>
+        <figure class="browser wide">
+          <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="assets/img/family-dashboard.webp" width="1100" height="860" loading="lazy" alt="Family dashboard showing today's reminders with their status and the list of all reminders">
+          <figcaption>Family dashboard</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ database ============ -->
+  <section id="database" class="section alt">
+    <div class="wrap">
+      <p class="kicker">Week 2 · Database structure</p>
+      <h2 class="title">Five main tables</h2>
+      <div class="tables">
+        <article class="tbl">
+          <h3><svg class="icon"><use href="#i-users"/></svg> Users</h3>
+          <ul><li><code>id</code> <em>PK</em></li><li><code>full_name</code></li><li><code>username</code> <em>unique</em></li><li><code>password_hash</code></li><li><code>role</code> elderly / family</li><li><code>language</code> ar / en</li></ul>
+        </article>
+        <article class="tbl">
+          <h3><svg class="icon"><use href="#i-link"/></svg> Family Links</h3>
+          <ul><li><code>id</code> <em>PK</em></li><li><code>elderly_id</code> <em>FK → Users</em></li><li><code>family_id</code> <em>FK → Users</em></li><li><code>relation</code> e.g. Daughter</li></ul>
+        </article>
+        <article class="tbl">
+          <h3><svg class="icon"><use href="#i-shield"/></svg> Invitations</h3>
+          <ul><li><code>id</code> <em>PK</em></li><li><code>code</code> <em>unique</em></li><li><code>elderly_id</code> <em>FK → Users</em></li><li><code>expires_at</code> 24 hours</li><li><code>used_by</code> single use</li></ul>
+        </article>
+        <article class="tbl">
+          <h3><svg class="icon"><use href="#i-bell"/></svg> Reminders</h3>
+          <ul><li><code>id</code> <em>PK</em></li><li><code>elderly_id</code> <em>FK → Users</em></li><li><code>kind</code> medication / appointment / task</li><li><code>title</code>, <code>details</code></li><li><code>start_date</code>, <code>time</code>, <code>repeat</code></li><li><code>voice_file</code></li></ul>
+        </article>
+        <article class="tbl">
+          <h3><svg class="icon"><use href="#i-reply"/></svg> Reminder Responses</h3>
+          <ul><li><code>id</code> <em>PK</em></li><li><code>reminder</code> <em>FK → Reminders</em></li><li><code>response_type</code> took it / later / text / voice</li><li><code>text</code>, <code>voice_file</code></li><li><code>created_at</code></li></ul>
+        </article>
+        <article class="tbl note-card">
+          <h3><svg class="icon"><use href="#i-db"/></svg> How they connect</h3>
+          <p>One <b>elderly user</b> can have many <b>family members</b> (through Family Links) and many <b>reminders</b>. Each reminder collects the elderly user’s <b>responses</b>. An <b>invitation</b> creates a new family link once, then expires.</p>
+        </article>
+      </div>
+
+      <h3 class="sub-title">Reminder creation &amp; scheduling workflow</h3>
+      <ol class="flow">
+        <li><span class="step">1</span><h3>Create</h3><p>Family member picks the type, title, date, time and repeat (once, daily, weekly).</p></li>
+        <li><span class="step">2</span><h3>Add a voice</h3><p>Record a personal message in the browser or upload a file. Without one, the text is read aloud.</p></li>
+        <li><span class="step">3</span><h3>Save</h3><p>The reminder is stored in the Reminders table, linked to the elderly user.</p></li>
+        <li><span class="step">4</span><h3>Notify</h3><p>At the set time: a chime, then the voice (or spoken text), with the reminder in large text.</p></li>
+        <li><span class="step">5</span><h3>Respond</h3><p>The elderly user taps the button and the family sees the response.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ team ============ -->
+  <section id="team" class="section">
+    <div class="wrap">
+      <p class="kicker">Week 2 · Task division</p>
+      <h2 class="title">Who is doing what</h2>
+      <div class="team">
+        <article class="member"><span class="av a1">N</span><div><h3>Noura Alshami</h3><p>Interface (UI/UX) &amp; Arabic/English</p></div></article>
+        <article class="member"><span class="av a2">F</span><div><h3>Fajer Nasser</h3><p>Backend &amp; database</p></div></article>
+        <article class="member"><span class="av a3">A</span><div><h3>Aryam Alshatti</h3><p>Voice notifications &amp; reminders</p></div></article>
+        <article class="member"><span class="av a4">G</span><div><h3>Genan Ali</h3><p>Testing &amp; documentation</p></div></article>
+      </div>
+
+      <h3 class="sub-title"><svg class="icon"><use href="#i-test"/></svg> Initial test cases</h3>
+      <div class="table-wrap">
+        <table class="tests">
+          <thead><tr><th>ID</th><th>Area</th><th>Test</th><th>Expected result</th></tr></thead>
+          <tbody>
+            <tr><td>TC-01</td><td>Reminder responses</td><td>Elderly user taps “I took it” on a medicine reminder</td><td>Response saved; family sees “I took it” with the time</td></tr>
+            <tr><td>TC-02</td><td>Reminder responses</td><td>Elderly user taps “Later”</td><td>Reminder comes back after 10 minutes</td></tr>
+            <tr><td>TC-03</td><td>Missed reminders</td><td>No answer for 15 minutes</td><td>Reminder is repeated as a follow-up</td></tr>
+            <tr><td>TC-04</td><td>Missed reminders</td><td>Still no answer after 30 minutes</td><td>Marked “No response” and shown to the family</td></tr>
+            <tr><td>TC-05</td><td>Secure family access</td><td>A family member who is not linked opens another elderly user’s page</td><td>Access refused</td></tr>
+            <tr><td>TC-06</td><td>Secure family access</td><td>An invitation code is used twice, or after 24 hours</td><td>Code refused</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ week 1 ============ -->
+  <section id="week1" class="section alt">
+    <div class="wrap">
+      <p class="kicker">Week 1 · Complete</p>
+      <h2 class="title">Planning deliverables</h2>
       <ol class="deliverables">
         <li>
           <span class="num">1</span>
@@ -102,10 +282,10 @@
   </section>
 
   <!-- ============ idea ============ -->
-  <section class="section alt">
+  <section class="section">
     <div class="wrap idea">
       <div>
-        <p class="kicker">1 · The idea</p>
+        <p class="kicker">Week 1 · The idea</p>
         <h2 class="title">Why SILAH?</h2>
         <p>Many elderly people take several medicines a day, have regular appointments and small daily tasks — and often live apart from the children who worry about them. Paper notes and phone alarms are easy to miss and do not tell the family anything.</p>
         <p><b>SILAH</b> (Arabic for “connection”) links the two sides. Family members set the reminders, record a short message in their own voice, and see whether each reminder was answered. The elderly user gets one clear, large-text screen with big buttons.</p>
@@ -131,9 +311,9 @@
   </section>
 
   <!-- ============ features ============ -->
-  <section id="features" class="section">
+  <section id="features" class="section alt">
     <div class="wrap">
-      <p class="kicker">2 · Main features</p>
+      <p class="kicker">Week 1 · Main features</p>
       <h2 class="title">What SILAH will do</h2>
       <div class="features">
         <article class="feature">
@@ -171,9 +351,9 @@
   </section>
 
   <!-- ============ workflow ============ -->
-  <section id="workflow" class="section alt">
+  <section id="workflow" class="section">
     <div class="wrap">
-      <p class="kicker">3 · Documentation</p>
+      <p class="kicker">Week 1 · Documentation</p>
       <h2 class="title">User workflow</h2>
       <ol class="flow">
         <li><span class="step">1</span><h3>Set up</h3><p>A family member signs up and creates the account for the elderly relative.</p></li>
@@ -209,9 +389,9 @@
   </section>
 
   <!-- ============ security ============ -->
-  <section id="security" class="section">
+  <section id="security" class="section alt">
     <div class="wrap">
-      <p class="kicker">3 · Documentation</p>
+      <p class="kicker">Week 1 · Documentation</p>
       <h2 class="title">Key security requirements</h2>
       <div class="sec-grid">
         <div class="sec"><svg class="icon"><use href="#i-shield"/></svg><div><h3>Protected passwords</h3><p>Passwords are stored only as secure hashes, never as plain text.</p></div></div>
@@ -225,9 +405,9 @@
   </section>
 
   <!-- ============ stack ============ -->
-  <section id="stack" class="section alt">
+  <section id="stack" class="section">
     <div class="wrap">
-      <p class="kicker">4 · Technology</p>
+      <p class="kicker">Week 1 · Technology</p>
       <h2 class="title">Proposed prototype stack</h2>
       <div class="stack">
         <div class="tech"><span class="badge html">HTML</span><p>Page structure and accessible, large-text screens.</p></div>
@@ -246,7 +426,7 @@
       <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="24" r="12" fill="none" stroke="#0e7a66" stroke-width="4.5"/><circle cx="30" cy="24" r="12" fill="none" stroke="#e07a2e" stroke-width="4.5"/></svg>
       <b>SILAH</b>
     </span>
-    <span>Group 208 · Kuwait Technical College · Supervisor: Ms. Annet Noel</span>
+    <span>Group 208 · Noura Alshami · Fajer Nasser · Aryam Alshatti · Genan Ali · Supervisor: Ms. Annet Noel</span>
   </div>
 </footer>
 
